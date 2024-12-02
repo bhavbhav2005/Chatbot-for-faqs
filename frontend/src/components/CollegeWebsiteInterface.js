@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+/*import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
 import './CollegeWebsiteInterface.css';
 
@@ -152,4 +152,70 @@ const CollegeWebsiteInterface = () => {
     );
 };
 
+export default CollegeWebsiteInterface;*/
+/*import React, { useState, useEffect, useRef } from "react";
+import { MessageCircle } from "lucide-react";
+import Navigation from "./Navigation";
+import PageContent from "./PageContent";
+import Chatbot from "./Chatbot";
+import "./CollegeWebsiteInterface.css";
+
+const CollegeWebsiteInterface = () => {
+  const [showChat, setShowChat] = useState(false);
+  const [activePage, setActivePage] = useState("dashboard");
+
+  return (
+    <div className="app">
+      {}
+      <header className="bg-primary text-white p-3">
+        <div className="container d-flex justify-content-between align-items-center">
+          <h1 className="display-6">Keshav Memorial Institute of Technology</h1>
+          <Navigation activePage={activePage} setActivePage={setActivePage} />
+        </div>
+      </header>
+
+      {/}
+      <main className="container my-4">
+        <PageContent activePage={activePage} />
+      </main>
+
+      {}
+      <div className="fixed-bottom me-4 mb-4 text-end">
+        <button
+          onClick={() => setShowChat(!showChat)}
+          className="btn btn-primary rounded-circle"
+          aria-label="Toggle Chatbot"
+        >
+          <MessageCircle size={24} />
+        </button>
+      </div>
+
+      {}
+      {showChat && <Chatbot />}
+    </div>
+  );
+};
+
+export default CollegeWebsiteInterface;*/
+import React, { useState } from 'react';
+import './CollegeWebsiteInterface.css';
+import Navigation from './Navigation';
+import PageContent from './PageContent';
+import Chatbot from './Chatbot';
+
+const CollegeWebsiteInterface = () => {
+    const [activePage, setActivePage] = useState('dashboard');
+
+    return (
+        <div className="app">
+            <Navigation activePage={activePage} setActivePage={setActivePage} />
+            <main className="container">
+                <PageContent activePage={activePage} />
+            </main>
+            <Chatbot />
+        </div>
+    );
+};
+
 export default CollegeWebsiteInterface;
+
